@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form </title>
+    <style> html, body, h1, formm, fieldset, legend, ol, li {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #ffffff;
+        color: #111111;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 20px;
+    }
+    form#payment {
+        background: lightblue;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        padding: 20px;
+        width: 400px;
+    }
+    form#payment fieldset{
+        border: none;
+        margin-bottom: 10px;
+    }
+    form#payment fieldset:last-of-type{
+        margin-bottom: 0;
+    }
+    form#payment legend{
+        color: #ff4800;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        text-shadow: 0 1px 1px white;
+    }
+    form#payment fieldset fieldset legend {
+        color: #111111;
+        font-size: 13px;
+        font-weight: normal;
+        padding-bottom: 0;
+    }
+    form#payment ol li {
+        background: lightblue;
+        background: rgba(255,255,255,.3);
+        border-color: #e3ebc3;
+        border-color: rgba(255,255,255,.6);
+        border-style: solid;
+        border-width: 2px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius: 5px;
+        line-height: 30px;
+        list-style: none;
+        padding: 5px 10px;
+        margin-bottom: 2px;
+    }
+    form#payment ol ol li {
+        background: none;
+        border: none;
+        float: left;
+    }
+    form#payment label {
+        float: left;
+        font-size: 13px;
+        width: 110px;
+    }
+    form#payment fieldset fieldset label {
+        background: none no-repeat left 50%;
+        line-height: 20px;
+        padding: 0 0 0 30px;
+        width: auto;
+    }
+    form#payment fieldset fieldset label:hover{
+        cursor: pointer;
+    }
+  
+    form#payment input:not([type=radio]),form#payment textarea{
+        background: #ffffff;
+        border: none;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        border-radius: 3px;
+        font:italic 13px georgia, "Times New Roman", Times, serif;
+        outline: none;
+        padding: 5px;
+        width:200px;
+    }
+    form#paymet input:not([type=submit])focus,
+    form#payment textarea:focus{
+        background: #eaeaea;
+    }
+    form#payment input[type=radio]{
+        float: left;
+        margin-right: 5px;
+    }
+    form#payment button{
+        background: #ff4800;
+        border: none;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -khtml-border-radius: 20px;
+        border-radius: 20px;
+        color: #ffffff;
+        display: block;
+        font: 18px Georgia, "Times New Roman", Times, serif;
+        letter-spacing: 1px;
+        margin: auto;
+        padding: 7px 25px;
+        text-shadow: 0 1px 1px #000000;
+        text-transform: uppercase;
+    }
+    form#payment button:hover {
+        background: #1e2506;
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+<center><body>
+    <form id="payment">
+        <fieldset>
+            <legend> YOUR DETAILS </legend>
+            <ol>
+                <li>
+                    <label> NAME </label>
+                    <input id="name" type="text" name="name" placeholder="Full Name " required>
+                </li><br>
+                <li>
+                    <label> EMAIL </label>
+                    <input id="email" type="email" name="email" placeholder="Enter Your Email" required>
+                </li><br>
+                <li>
+                    <label> PHONE </label>
+                    <input id="phone" type="number" name="phone" placeholder="Enter Mobile Number" required>  
+                </li><br>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend> DELIVERY ADDRESS </legend>
+            <ol>
+                <li>
+                    <label> ADDRESS </label>
+                    <textarea name="address" id="address" required></textarea>
+                </li><br>
+                <li>
+                    <label> PIN CODE </label>
+                    <input type="text" id="postcode" name="postcode" placeholder="Enter Code" required>
+                </li><br>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend> CARD DETAILS </legend>
+            <ol>
+                <li>
+                    <fieldset>
+                        <legend> CARD TYPE </legend>
+                        <ol>
+                            <li>
+                                <label> VISA </label>
+                                <input type="radio" id="visa" name="cardtype">
+                            </li>
+                            <li>
+                                <label> RUPAY </label>
+                                <input type="radio" id="rupay" name="cardtype">
+                            </li> <li>
+                                <label> Mastercard </label>
+                                <input type="radio" id="mastercard" name="cardtype">
+                            </li>
+                        </ol>
+                    </fieldset>  <br>
+                </li>
+                <li> 
+                    <label> Card Number </label>
+                    <input type="number" id="cardnumber" name="cardnumber">
+                </li><br>
+                <li>
+                    <label> Security Code </label>
+                    <input type="number" id="secure" name="secure">
+                </li><br>
+                <li>
+                    <label> Name On Card  </label>
+                    <input type="text" id="namecard" name="namecard">
+                </li><br>
+            </ol>
+        </fieldset>
+        <fieldset align="center ">
+            <button type="submit"> SUBMIT </button>
+        </fieldset>
+    </form>
+</center>
+</body>
+</html>
